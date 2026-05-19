@@ -45,9 +45,17 @@ print()
 
 # Preview first few files
 
+print(f"Generated {len(documents)} semantic chunks.")
+print()
+
 for doc in documents[:3]:
-    print("FILE:", doc["file_name"])
-    print("PATH:", doc["path"])
-    print("CONTENT PREVIEW:")
-    print(doc["content"][:200])
-    print("-" * 50)
+
+    print("CONTENT:")
+    print(doc.page_content[:300])
+
+    print()
+
+    print("METADATA:")
+    print(doc.metadata)
+
+    print("-" * 60)
